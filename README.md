@@ -2,6 +2,19 @@
 
 This project is an extension of the existing TestNG-based framework for automated testing of QTrip. It includes API tests using RestAssured to validate various functionalities.
 
+## Table of Contents
+- [Background](#background)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Test Cases](#test-cases)
+  - [Test Case 1: User Registration and Login](#test-case-1-user-registration-and-login)
+  - [Test Case 2: City Search API](#test-case-2-city-search-api)
+  - [Test Case 3: Reservation](#test-case-3-reservation)
+  - [Test Case 4: New and Duplicate Registrations](#test-case-4-new-and-duplicate-registrations)
+- [Integration with TestNG Framework](#integration-with-testng-framework)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Background
 
 This project extends the existing TestNG-based framework for automated testing of QTrip. The goal is to include API tests using RestAssured to validate the functionality of the QTrip API.
@@ -38,9 +51,6 @@ Follow these steps to set up and install the API automation suite:
 1. The Register API should return a status code 201.
 2. After successful login, status code 201 must be returned. The response body should contain: `Success = true`.
 
-**Flow:**
-![Test Case 1 Flow](path/to/test_case_1_flow.png)
-
 **Group:**
 API Tests
 
@@ -56,9 +66,6 @@ While registering users, ensure the username is universally unique.
 **Expected Result:**
 1. After a successful search, the status code must be 200.
 2. The result should be an array of length 1. The description should contain "100+ Places".
-
-**Flow:**
-![Test Case 2 Flow](path/to/test_case_2_flow.png)
 
 **Group:**
 API Tests
@@ -85,6 +92,21 @@ API Tests
 **Validations:**
 - Status code should be 200 for a successful booking.
 - Check if the reservation is available in the /api/v1/reservations call.
+
+### Test Case 4: New and Duplicate Registrations
+
+**Steps:**
+1. Register a new user using the register API.
+2. Verify the success and status code for the first-time registration.
+3. Attempt to register with the same email (duplicate registration).
+4. Verify the success, status code, and error message for the duplicate registration.
+
+**Group:**
+API Tests
+
+**Validations:**
+- Verify successful registration on the first attempt.
+- Verify unsuccessful duplicate registration with the correct error message.
 
 ## Integration with TestNG Framework
 
