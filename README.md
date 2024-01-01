@@ -112,10 +112,4 @@ API Tests
 
 Describe how the API automation suite has been integrated into the existing TestNG framework. Include information on how to run both UI and API tests together, and any modifications made to the existing framework.
 
-## Contributing
 
-To contribute to this project, follow the guidelines in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
