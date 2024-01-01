@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="qtriptest.APITests.testCase_API_03" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-01T12:57:22" hostname="DESKTOP-OS27IQH" time="3.588">
+  <properties/>
+  <testcase name="TestCase03" classname="qtriptest.APITests.testCase_API_03" time="3.588"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
