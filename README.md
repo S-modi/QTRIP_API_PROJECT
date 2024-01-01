@@ -1,95 +1,99 @@
-QTrip API Automation Suite
+# QTrip API Automation Suite
+
 This project is an extension of the existing TestNG-based framework for automated testing of QTrip. It includes API tests using RestAssured to validate various functionalities.
 
-Table of Contents
-Background
-Prerequisites
-Installation
-Test Cases
-Test Case 1: User Registration and Login
-Test Case 2: City Search API
-Test Case 3: Reservation
-Integration with TestNG Framework
-Contributing
-License
-Background
+## Background
+
 This project extends the existing TestNG-based framework for automated testing of QTrip. The goal is to include API tests using RestAssured to validate the functionality of the QTrip API.
 
-Prerequisites
+## Prerequisites
+
 Before running the API tests, ensure you have the following prerequisites:
 
-Postman for manually executing test cases
-RestAssured library
-TestNG framework
-Java SDK
-Installation
+- Postman for manually executing test cases
+- RestAssured library
+- TestNG framework
+- Java SDK
+
+## Installation
+
 Follow these steps to set up and install the API automation suite:
 
-Clone the repository to your local machine.
-Install Postman for manual test case execution.
-Install RestAssured library and TestNG framework in your project.
-Ensure the Java SDK is installed on your machine.
-Test Cases
-Test Case 1: User Registration and Login
-Steps:
+1. Clone the repository to your local machine.
+2. Install Postman for manual test case execution.
+3. Install RestAssured library and TestNG framework in your project.
+4. Ensure the Java SDK is installed on your machine.
 
-Use the register API to register a new user.
-Use the Login API to log in using the registered user.
-Validate that the login was successful.
-Verify that the token and user id are returned for login.
-Expected Result:
+## Test Cases
 
-The Register API should return a status code 201.
-After successful login, status code 201 must be returned. The response body should contain: Success = true.
-Flow:
+### Test Case 1: User Registration and Login
 
-Group:
+**Steps:**
+1. Use the register API to register a new user.
+2. Use the Login API to log in using the registered user.
+3. Validate that the login was successful.
+4. Verify that the token and user id are returned for login.
+
+**Expected Result:**
+1. The Register API should return a status code 201.
+2. After successful login, status code 201 must be returned. The response body should contain: `Success = true`.
+
+**Flow:**
+![Test Case 1 Flow](path/to/test_case_1_flow.png)
+
+**Group:**
 API Tests
 
-Note:
+**Note:**
 While registering users, ensure the username is universally unique.
 
-Test Case 2: City Search API
-Steps:
+### Test Case 2: City Search API
 
-Search for "beng" using the cities search API.
-Verify the count of results being returned.
-Expected Result:
+**Steps:**
+1. Search for "beng" using the cities search API.
+2. Verify the count of results being returned.
 
-After a successful search, the status code must be 200.
-The result should be an array of length 1. The description should contain "100+ Places".
-Flow:
+**Expected Result:**
+1. After a successful search, the status code must be 200.
+2. The result should be an array of length 1. The description should contain "100+ Places".
 
-Group:
+**Flow:**
+![Test Case 2 Flow](path/to/test_case_2_flow.png)
+
+**Group:**
 API Tests
 
-Validations:
+**Validations:**
+- Status code should be 200.
+- Result should be an array of length 1.
+- Response JSON Schema validation.
 
-Status code should be 200.
-Result should be an array of length 1.
-Response JSON Schema validation.
-Test Case 3: Reservation
-Steps:
+### Test Case 3: Reservation
 
-Create a new user using API and log in.
-Perform a booking using a POST call.
-Ensure that the booking goes fine.
-Expected Result:
+**Steps:**
+1. Create a new user using API and log in.
+2. Perform a booking using a POST call.
+3. Ensure that the booking goes fine.
 
-On a successful booking, status code 200 should be returned.
-Perform a GET Reservations call for the user and ensure that the successful booking is listed there.
-Group:
+**Expected Result:**
+1. On a successful booking, status code 200 should be returned.
+2. Perform a GET Reservations call for the user and ensure that the successful booking is listed there.
+
+**Group:**
 API Tests
 
-Validations:
+**Validations:**
+- Status code should be 200 for a successful booking.
+- Check if the reservation is available in the /api/v1/reservations call.
 
-Status code should be 200 for a successful booking.
-Check if the reservation is available in the /api/v1/reservations call.
-Integration with TestNG Framework
+## Integration with TestNG Framework
+
 Describe how the API automation suite has been integrated into the existing TestNG framework. Include information on how to run both UI and API tests together, and any modifications made to the existing framework.
 
-Contributing
-To contribute to this project, follow the guidelines in the CONTRIBUTING.md file.
+## Contributing
 
-License
-This project is licensed under the MIT License.
+To contribute to this project, follow the guidelines in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
